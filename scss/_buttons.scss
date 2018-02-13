@@ -1,0 +1,33 @@
+
+@mixin default-btn {
+  color: white;
+  padding: 15px 32px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+@mixin large-btn {
+  color: white;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+}
+
+a.primary {
+  @include default-btn;
+  background-color: colour('primary');
+}
+
+
+a.secondary {
+  @include default-btn;
+  background-color: colour('secondary');
+}
+
+a.primary.large {
+  @include large-btn;
+  background-color: colour('primary');
+}
