@@ -46,7 +46,6 @@ $neat-large: ( columns: 12, gutter: 1rem, media: "(min-width: 1200px)", color: r
 /*---------------------------------
 4. Standard Columns
 ----------------------------------*/
-
 .full-column {
     @include grid-column(1);
 }
