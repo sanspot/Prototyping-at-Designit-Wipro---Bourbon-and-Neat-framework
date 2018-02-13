@@ -15,11 +15,9 @@ html {
 2. Breakpoints
 ----------------------------------*/
 $neat-grid: ( columns: 1, gutter: 1rem, );
-$neat-small: ( columns: 2, gutter: 1rem, media: 600px, color: rgba(#00d4ff, 0.25), direction: ltr, );
-$neat-medium: ( columns: 6, gutter: 1rem, media: 900px, color: rgba(#00d4ff, 0.25), direction: ltr, );
-$neat-large: ( columns: 12, gutter: 1rem, media: 1200px, color: rgba(#00d4ff, 0.25), direction: ltr, );
-$neat-larger: ( columns: 12, gutter: 1rem, media: 1800px, color: rgba(#00d4ff, 0.25), direction: ltr, );
-$neat-super: ( columns: 12, gutter: 1rem, media: 2400px, color: rgba(#00d4ff, 0.25), direction: ltr, );
+$neat-small: ( columns: 2, gutter: 1rem, media: "(min-width: 600px)", color: rgba(#6DD00C, 0.25), direction: ltr, );
+$neat-medium: ( columns: 6, gutter: 1rem, media: "(min-width: 900px)", color: rgba(#F4D0E7, 0.25), direction: ltr, );
+$neat-large: ( columns: 12, gutter: 1rem, media: "(min-width: 1200px)", color: rgba(#00d4ff, 0.25), direction: ltr,);
 
 //#######################################################
 //####################################################### CLASSES
@@ -43,26 +41,18 @@ $neat-super: ( columns: 12, gutter: 1rem, media: 2400px, color: rgba(#00d4ff, 0.
        @include grid-container($neat-large);
        @include grid-visual;
   }
-  @include grid-media($neat-larger) {
-       @include grid-container($neat-larger);
-       @include grid-visual;
-  }
-  @include grid-media($neat-super) {
-       @include grid-container($neat-super);
-       @include grid-visual;
-  }
 }
 
 /*---------------------------------
 4. Standard Columns
 ----------------------------------*/
-
+section,
 .full-column {
     @include grid-column(1);
 }
 
 .half-column {
-    //@include grid-column(1);
+    @include grid-column(1);
     @include grid-media($neat-small) {
          @include grid-column(1);
     }
@@ -75,7 +65,7 @@ $neat-super: ( columns: 12, gutter: 1rem, media: 2400px, color: rgba(#00d4ff, 0.
 }
 
 .one-thirds-column {
-    //@include grid-column(1);
+    @include grid-column(1);
     @include grid-media($neat-small) {
          @include grid-column(2);
     }
