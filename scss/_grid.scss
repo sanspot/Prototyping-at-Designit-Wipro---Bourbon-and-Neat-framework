@@ -25,6 +25,7 @@ $neat-large: ( columns: 12, gutter: 1rem, media: "(min-width: 1200px)", color: r
 /*---------------------------------
 3. Container
 ----------------------------------*/
+section,
 .container {
   @include grid-container;
   @include grid-visual;
