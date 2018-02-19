@@ -1,33 +1,18 @@
-
-@mixin default-btn {
+%btn {
   color: white;
   padding: 15px 32px;
-  border: none;
   text-align: center;
   text-decoration: none;
   display: inline-block;
+  font-family: $font-stack-helvetica;
 }
 
-@mixin large-btn {
-  color: white;
-  border: none;
-  text-align: center;
-  text-decoration: none;
-  width: 100%;
-}
-
-a.primary {
-  @include default-btn;
+.primary {
+  @extend %btn;
   background-color: colour('primary');
 }
 
-
-a.secondary {
-  @include default-btn;
+.primary.orange {
+  @extend %btn;
   background-color: colour('secondary');
-}
-
-a.primary.large {
-  @include large-btn;
-  background-color: colour('primary');
 }
